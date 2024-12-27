@@ -1,0 +1,132 @@
+
+.menu-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    margin: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.3s ease;
+    position: fixed;
+    top: 60px; 
+    /* left: 10px;  */
+    z-index: 60;
+    color: #888; 
+  }
+  
+  .menu-button:hover {
+    background: #f3f4f6;
+  }
+  
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+  }
+  
+
+  .sidebar {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    z-index: 40;
+    width: 16rem;
+    height: calc(100vh - 60px); 
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar-content {
+    padding: 16px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .sidebar {
+        
+      transform: translateX(0); 
+    }
+  
+    .menu-button {
+      display: none; 
+      z-index: 1000;
+    }
+  }
+  
+
+  .sidebar-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    margin: 0 0 0 16px;
+  }
+  
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-item .icon {
+    margin-right: 8px;
+    color: #666;
+  }
+  
+  .sidebar-item:hover {
+    color: #1d4ed8;
+    background: #f1f5f9;
+  }
+  
+  
+  .sidebar-subheading {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    margin: 12px 0 6px;
+  }
+  
+  
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sidebar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
